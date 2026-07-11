@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jenifer Vincy A | Portfolio</title>
     <meta name="description" content="Portfolio of Jenifer Vincy A — Embedded Systems &amp; IoT Engineer.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -30,188 +33,197 @@
         <a href="#projects" class="btn">View My Work</a>
     </div>
     <div class="hero-image">
-        <img src="assets/images/jeni.jpeg" alt="Jenifer Vincy A">
+        <img src="assets/images/jeni.jpg" alt="Jenifer Vincy A">
     </div>
 </section>
 
 <section id="about">
     <h2>About Me</h2>
-    <p>
-        I'm an Electrical and Electronics Engineering student at KIT-Kalaignar Karunanidhi
-        Institute of Technology, currently maintaining an 8.79 CGPA. My work centers on
-        embedded systems and IoT — from ECU architectures and communication protocols like
-        CAN, LIN, and I2C, to building real-time edge AI systems on microcontrollers like
-        ESP32 and STM32.
-    </p>
-    <p>
-        Beyond coursework, I've worked hands-on through internships studying Software Defined
-        Vehicle concepts, and industrial training in PCB design and circuit debugging. I enjoy
-        turning hardware and data into systems that solve real problems — whether that's
-        predictive maintenance for industrial machines or adaptive traffic signals for
-        emergency response.
-    </p>
-    <p>
-        My work on <strong>EDGE-AI Smart Auditor</strong>, a real-time power monitoring system
-        built on STM32, has been accepted for publication at the ICOSAAS 2026 conference and
-        will appear in IEEE Xplore.
-    </p>
+    <div class="about-text">
+        <p>
+            I'm an Electrical and Electronics Engineering student at KIT-Kalaignar Karunanidhi
+            Institute of Technology, currently maintaining an 8.79 CGPA. My work centers on
+            embedded systems and IoT — from ECU architectures and communication protocols like
+            CAN, LIN, and I2C, to building real-time edge AI systems on microcontrollers like
+            ESP32 and STM32.
+        </p>
+        <p>
+            Beyond coursework, I've worked hands-on through internships studying Software Defined
+            Vehicle concepts, and industrial training in PCB design and circuit debugging. I enjoy
+            turning hardware and data into systems that solve real problems — whether that's
+            predictive maintenance for industrial machines or adaptive traffic signals for
+            emergency response.
+        </p>
+        <p>
+            My work on <strong>EDGE-AI Smart Auditor</strong>, a real-time power monitoring system
+            built on STM32, has been accepted for publication at the ICOSAAS 2026 conference and
+            will appear in IEEE Xplore.
+        </p>
+    </div>
 </section>
 
 <section id="skills">
     <h2>Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-category">
+            <h3>Programming</h3>
+            <ul>
+                <li>C</li>
+                <li>Embedded C</li>
+                <li>C++</li>
+                <li>Python</li>
+                <li>Java</li>
+            </ul>
+        </div>
+    
 
-    <div class="skill-category">
-        <h3>Programming</h3>
-        <ul>
-            <li>C</li>
-            <li>Embedded C</li>
-            <li>C++</li>
-            <li>Python</li>
-            <li>Java</li>
-        </ul>
-    </div>
+        <div class="skill-category">
+            <h3>Technical Domains</h3>
+            <ul>
+                <li>PCB Design</li>
+                <li>ECU Architecture</li>
+                <li>Communication Protocols (CAN, LIN, UART, I2C)</li>
+                <li>IIoT / IoT Systems</li>
+            </ul>
+        </div>
 
-    <div class="skill-category">
-        <h3>Technical Domains</h3>
-        <ul>
-            <li>PCB Design</li>
-            <li>ECU Architecture</li>
-            <li>Communication Protocols (CAN, LIN, UART, I2C)</li>
-            <li>IIoT / IoT Systems</li>
-        </ul>
-    </div>
+        <div class="skill-category">
+            <h3>Microcontrollers</h3>
+            <ul>
+                <li>Arduino</li>
+                <li>ESP32</li>
+                <li>STM32</li>
+            </ul>
+        </div>
 
-    <div class="skill-category">
-        <h3>Microcontrollers</h3>
-        <ul>
-            <li>Arduino</li>
-            <li>ESP32</li>
-            <li>STM32</li>
-        </ul>
-    </div>
-
-    <div class="skill-category">
-        <h3>Tools</h3>
-        <ul>
-            <li>Autodesk EAGLE</li>
-            <li>Git &amp; GitHub</li>
-            <li>MATLAB</li>
-        </ul>
+        <div class="skill-category">
+            <h3>Tools</h3>
+            <ul>
+                <li>Autodesk EAGLE</li>
+                <li>Git &amp; GitHub</li>
+                <li>MATLAB</li>
+            </ul>
+        </div>
     </div>
 </section>
 
 <section id="projects">
     <h2>Projects</h2>
+    <div class="card-grid">
+        <article class="project-card">
+            <h3>BoltOn.AI</h3>
+            <p>
+                A plug-and-play Industrial IoT system using a non-invasive magnetic sensor node for
+                real-time machine health monitoring. Combines edge AI, FFT-based signal analysis, and
+                MQTT streaming to enable affordable predictive maintenance for SMEs — reducing downtime
+                by up to 30–35%.
+            </p>
+            <a href="https://jenifervincya.github.io/bolton.ai/" target="_blank" rel="noopener noreferrer">View Live Demo →</a>
+            <a href="https://github.com/jenifervincya/bolton.ai" target="_blank" rel="noopener noreferrer">Source Code →</a>
+        </article>
 
-    <article class="project-card">
-        <h3>BoltOn.AI</h3>
-        <p>
-            A plug-and-play Industrial IoT system using a non-invasive magnetic sensor node for
-            real-time machine health monitoring. Combines edge AI, FFT-based signal analysis, and
-            MQTT streaming to enable affordable predictive maintenance for SMEs — reducing downtime
-            by up to 30–35%.
-        </p>
-        <a href="https://jenifervincya.github.io/bolton.ai/" target="_blank" rel="noopener noreferrer">View Live Demo →</a>
-        <a href="https://github.com/jenifervincya/bolton.ai" target="_blank" rel="noopener noreferrer">Source Code →</a>
-    </article>
+        <article class="project-card">
+            <h3>ResQPath</h3>
+            <p>
+                An IoT-based smart traffic management system that reduces ambulance response time by
+                automatically clearing traffic signals along the emergency route. Uses RFID to detect
+                approaching ambulances and ESP32 to control signal switching in real time, with live
+                tracking via a Blynk IoT dashboard.
+            </p>
+            <a href="https://github.com/jenifervincya/ResQPath" target="_blank" rel="noopener noreferrer">Source Code →</a>
+        </article>
 
-    <article class="project-card">
-        <h3>ResQPath</h3>
-        <p>
-            An IoT-based smart traffic management system that reduces ambulance response time by
-            automatically clearing traffic signals along the emergency route. Uses RFID to detect
-            approaching ambulances and ESP32 to control signal switching in real time, with live
-            tracking via a Blynk IoT dashboard.
-        </p>
-        <a href="https://github.com/jenifervincya/ResQPath" target="_blank" rel="noopener noreferrer">Source Code →</a>
-    </article>
+        <article class="project-card">
+            <h3>Water Level Indicator PCB</h3>
+            <p>
+                A compact, reliable PCB for monitoring water levels in a storage tank with LED-based
+                visual indication. Designed the full workflow in EasyEDA — schematic capture, layout,
+                routing, and Gerber file generation for fabrication.
+            </p>
+            <a href="https://github.com/jenifervincya/Water-Level-Indicator-PCB" target="_blank" rel="noopener noreferrer">Source Code →</a>
+        </article>
 
-    <article class="project-card">
-        <h3>Water Level Indicator PCB</h3>
-        <p>
-            A compact, reliable PCB for monitoring water levels in a storage tank with LED-based
-            visual indication. Designed the full workflow in EasyEDA — schematic capture, layout,
-            routing, and Gerber file generation for fabrication.
-        </p>
-        <a href="https://github.com/jenifervincya/Water-Level-Indicator-PCB" target="_blank" rel="noopener noreferrer">Source Code →</a>
-    </article>
-
-    <article class="project-card">
-        <h3>Wander &amp; Wonder</h3>
-        <p>
-            A front-end web project exploring the four Hogwarts houses — their founders, values,
-            symbols, and notable members — built while learning HTML, CSS, and JavaScript
-            fundamentals, including responsive layout and navigation design.
-        </p>
-        <a href="https://jenifervincya.github.io/wander-and-wonder/" target="_blank" rel="noopener noreferrer">View Live Demo →</a>
-        <a href="https://github.com/jenifervincya/wander-and-wonder" target="_blank" rel="noopener noreferrer">Source Code →</a>
-    </article>
-
+        <article class="project-card">
+            <h3>Wander &amp; Wonder</h3>
+            <p>
+                A front-end web project exploring the four Hogwarts houses — their founders, values,
+                symbols, and notable members — built while learning HTML, CSS, and JavaScript
+                fundamentals, including responsive layout and navigation design.
+            </p>
+            <a href="https://jenifervincya.github.io/wander-and-wonder/" target="_blank" rel="noopener noreferrer">View Live Demo →</a>
+            <a href="https://github.com/jenifervincya/wander-and-wonder" target="_blank" rel="noopener noreferrer">Source Code →</a>
+        </article>
+    </div>
 </section>
 
 <section id="experience">
     <h2>Experience</h2>
+    <div class="card-grid">
+        <article class="experience-card">
+            <img src="assets/images/iQuants1.jpg" alt="ECU testing setup at iQuants Engineering Solutions internship" class="img-wide">
+            <div class="experience-details">
+                <h3>Internship — iQuants Engineering Solutions</h3>
+                <span class="experience-meta">Coimbatore, India (On-site) · May–June 2026</span>
+                <p>
+                    Studied ECU architectures and Software Defined Vehicle (SDV) concepts across body,
+                    powertrain, and chassis domains. Analyzed CAN, LIN, Ethernet, UART, and I2C protocols
+                    in embedded ECU workflows.
+                </p>
+            </div>
+        </article>
 
-    <article class="experience-card">
-        <img src="assets/images/iQuants1.jpg" alt="ECU testing setup at iQuants Engineering Solutions internship">
-        <div class="experience-details">
-            <h3>Internship — iQuants Engineering Solutions</h3>
-            <span class="experience-meta">Coimbatore, India (On-site) · May–June 2026</span>
-            <p>
-                Studied ECU architectures and Software Defined Vehicle (SDV) concepts across body,
-                powertrain, and chassis domains. Analyzed CAN, LIN, Ethernet, UART, and I2C protocols
-                in embedded ECU workflows.
-            </p>
-        </div>
-    </article>
-
-    <article class="experience-card">
-        <img src="assets/images/sunshiv1.jpg" alt="PCB assembly at Sunshiv Electronic Solutions">
-        <img src="assets/images/sunshiv2.jpg" alt="Soldering work at Sunshiv Electronic Solutions">
-        <div class="experience-details">
-            <h3>Industrial Training — Sunshiv Electronic Solutions</h3>
-            <span class="experience-meta">Coimbatore, India (On-site) · December 2025</span>
-            <p>
-                Designed PCB schematics and assembled circuits using Autodesk EAGLE. Developed skills
-                in component selection, circuit debugging, soldering, and PCB fault analysis.
-            </p>
-        </div>
-    </article>
+        <article class="experience-card">
+            <div class="image-gallery"></div>
+                <img src="assets/images/sunshiv1.jpg" alt="PCB assembly at Sunshiv Electronic Solutions">
+                <img src="assets/images/sunshiv2.jpg" alt="Soldering work at Sunshiv Electronic Solutions">
+            </div>
+            <div class="experience-details">
+                <h3>Industrial Training — Sunshiv Electronic Solutions</h3>
+                <span class="experience-meta">Coimbatore, India (On-site) · December 2025</span>
+                <p>
+                    Designed PCB schematics and assembled circuits using Autodesk EAGLE. Developed skills
+                    in component selection, circuit debugging, soldering, and PCB fault analysis.
+                </p>
+            </div>
+        </article>
+    </div>
 </section>
 
 <section id="achievements">
     <h2>Achievements</h2>
+    <div class="card-grid">
+        <article class="achievement-card">
+            <img src="assets/images/delhi1.jpg" alt="KIT-TANCAM team with their wireless RC electric car at the Technoxian World Robotics Championship">
+            <div class="achievement-details">
+                <h3>Technoxian World Robotics Championship — RC Electric Car Race</h3>
+                <span class="achievement-meta">Noida Indoor Stadium, New Delhi · <time datetime="2025-08-30">August 30–September 2, 2025</time></span>
+                <p>
+                    Represented KIT in association with TANCAM at the Technoxian World Robotics 
+                    Championship, designing and building a wireless RC electric car at the KIT AICTE 
+                    IDEA Lab. Our team completed the race without a single penalty and narrowly missed 
+                    the finals by just 18 seconds.
+                </p>
+            </div>
+        </article>
 
-    <article class="achievement-card">
-        <img src="assets/images/delhi1.jpg" alt="KIT-TANCAM team with their wireless RC electric car at the Technoxian World Robotics Championship">
-        <div class="achievement-details">
-            <h3>Technoxian World Robotics Championship — RC Electric Car Race</h3>
-            <span class="achievement-meta">Noida Indoor Stadium, New Delhi · <time datetime="2025-08-30">August 30–September 2, 2025</time></span>
-            <p>
-                Represented KIT in association with TANCAM at the Technoxian World Robotics 
-                Championship, designing and building a wireless RC electric car at the KIT AICTE 
-                IDEA Lab. Our team completed the race without a single penalty and narrowly missed 
-                the finals by just 18 seconds.
-            </p>
-        </div>
-    </article>
-
-    <article class="achievement-card">
-        <img src="assets/images/36hrsHackathon1.jpeg" alt="Day 1 at HackSpark 36-hour hackathon">
-        <img src="assets/images/36hrsHackathon2.jpg" alt="Day 2 at HackSpark 36-hour hackathon">
-        <img src="assets/images/36hrsHackathon3.jpg" alt=" Waste to Watts project setup">
-        <div class="achievement-details">
-            <h3>HackSpark — 36-Hour Hackathon, KIT</h3>
-            <span class="achievement-meta">KIT-Kalaignar Karunanidhi Institute of Technology</span>
-            <p>
-                Built "Waste to Watts," a smart solution converting organic waste into electricity 
-                using Microbial Fuel Cells (MFCs) with real-time IoT monitoring, alongside a 
-                companion website to showcase the project. The project aligned with UN Sustainable 
-                Development Goals around clean energy and climate action.
-            </p>
-        </div>
-    </article>
-
+        <article class="achievement-card">
+            <div class="image-gallery"></div>
+                <img src="assets/images/36hrsHackathon1.jpeg" alt="Day 1 at HackSpark 36-hour hackathon">
+                <img src="assets/images/36hrsHackathon3.jpg" alt="Day 2 at HackSpark 36-hour hackathon">
+                <img src="assets/images/36hrsHackathon2.jpg" alt=" Waste to Watts project setup">
+            </div>
+            <div class="achievement-details">
+                <h3>HackSpark — 36-Hour Hackathon, KIT</h3>
+                <span class="achievement-meta">KIT-Kalaignar Karunanidhi Institute of Technology</span>
+                <p>
+                    Built "Waste to Watts," a smart solution converting organic waste into electricity 
+                    using Microbial Fuel Cells (MFCs) with real-time IoT monitoring, alongside a 
+                    companion website to showcase the project. The project aligned with UN Sustainable 
+                    Development Goals around clean energy and climate action.
+                </p>
+            </div>
+        </article>
+    </div>
 </section>
 
 <section id="contact">
