@@ -15,8 +15,10 @@
     <header>
         <div class="logo">Jenifer Vincy A</div>
         <nav>
+            <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
             <ul>
                 <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
@@ -30,7 +32,12 @@
         <div class="hero-content">
             <h1>Hi, I'm Jenifer Vincy A</h1>
             <p>Embedded Systems &amp; IoT Engineer building intelligent, connected hardware.</p>
-            <a href="#projects" class="btn">View My Work</a>
+            <div class="hero-links">
+                <a href="#projects" class="btn">View My Work</a>
+                <a href="assets/resume.pdf" target="_blank" class="btn">View My Resume</a>
+                <a href="https://github.com/jenifervincya" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
+                <a href="https://www.linkedin.com/in/jenifer-vincy-a-ab569b325" target="_blank" rel="noopener noreferrer" class="btn">LinkedIn</a>
+            </div>
         </div>
         <div class="hero-image">
             <img src="assets/images/jeni.jpg" alt="Jenifer Vincy A">
@@ -38,7 +45,6 @@
     </section>
 
     <section id="about" class="reveal">
-        <span class="kicker"></span>
         <h2>About Me</h2>
         <div class="about-text">
             <p>
@@ -63,8 +69,16 @@
         </div>
     </section>
 
+    <section id="education" class="reveal">
+        <h2>Education</h2>
+        <div class="education-card">
+            <h3>B.E. Electrical and Electronics Engineering</h3>
+            <span class="experience-meta">KIT-Kalaignarkarunanidhi Institute of Technology · 2024–2028</span>
+            <p>Current CGPA: <strong>8.79</strong></p>
+        </div>
+    </section>
+
     <section id="skills" class="reveal">
-        <span class="kicker"></span>
         <h2>Skills</h2>
         <div class="skills-grid">
             <div class="skill-category">
@@ -110,7 +124,6 @@
     </section>
 
     <section id="projects" class="reveal">
-        <span class="kicker"></span>
         <h2>Projects</h2>
         <div class="card-grid">
             <article class="project-card">
@@ -160,7 +173,6 @@
     </section>
 
     <section id="experience" class="reveal">
-        <span class="kicker"></span>
         <h2>Experience</h2>
         <div class="card-grid">
             <article class="experience-card">
@@ -190,8 +202,8 @@
                 <div class="card-media">
                     <div class="carousel">
                         <div class="carousel-track">
-                            <img src="assets/images/sunshiv1.jpg" alt="PCB assembly at Sunshiv Electronic Solutions">
                             <img src="assets/images/sunshiv2.jpg" alt="Soldering work at Sunshiv Electronic Solutions">
+                            <img src="assets/images/sunshiv1.jpg" alt="PCB assembly at Sunshiv Electronic Solutions">
                         </div>
                         <div class="carousel-dots"></div>
                     </div>
@@ -201,7 +213,6 @@
     </section>
 
     <section id="achievements" class="reveal">
-        <span class="kicker"></span>
         <h2>Achievements</h2>
         <div class="card-grid">
             <article class="achievement-card">
@@ -246,11 +257,10 @@
     </section>
 
     <section id="contact" class="reveal">
-        <span class="kicker"></span>
         <h2>Contact</h2>
         <p>Interested in working together or just want to say hello? Reach out below.</p>
 
-        <form action="#" method="POST">
+        <form action="https://formspree.io/f/xykrgoey" method="POST">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
@@ -272,10 +282,7 @@
 
     <footer>
         <p>&copy; 2026 Jenifer Vincy A. All rights reserved.</p>
-        <div class="social-links">
-            <a href="https://github.com/jenifervincya" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/jenifer-vincy-a-ab569b325" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </div>
+        <a href="mailto:jenifervincy06@gmail.com" class="footer-email">jenifervincy06@gmail.com</a>
     </footer>
     <script src="js/script.js"></script>
     </body>

@@ -12,6 +12,8 @@
     --color-light: #f8fafc;
     --color-text: #1e293b;
     --color-text-muted: #64748b;
+    --color-card: #ffffff;
+    --color-border: #e2e8f0;
 
     /* Spacing scale */
     --space-xs: 0.5rem;
@@ -24,6 +26,16 @@
     /* Typography */
     --font-heading: 'Fraunces', serif;
     --font-body: 'Inter', sans-serif;
+}
+
+[data-theme="dark"] {
+    --color-primary: #60a5fa;
+    --color-dark: #f8fafc;
+    --color-light: #0f172a;
+    --color-text: #e2e8f0;
+    --color-text-muted: #94a3b8;
+    --color-card: #1e293b;
+    --color-border: #334155;
 }
 
 ul {
@@ -70,6 +82,21 @@ nav a {
 
 nav a:hover {
     color: var(--color-primary);
+}
+
+#theme-toggle {
+    background: none;
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#theme-toggle:hover {
+    background-color: var(--color-card);
 }
 
 /* ---------- Hero ---------- */
@@ -123,27 +150,54 @@ nav a:hover {
 }
 
 .btn:hover {
-    background-color: var(--color-dark);
+    background-color: #1e40af;
+}
+
+/* ---------- Section shared spacing ---------- */
+#about, #education, #skills, #projects, #experience, #achievements, #contact {
+    padding: var(--space-2xl) var(--space-lg);
+}
+
+section:not(#hero) {
+    border-top: 1px solid var(--color-border);
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
 }
 
 /* ---------- About ---------- */
-#about {
-    padding: var(--space-xl) var(--space-lg);
-}
-
 .about-text {
     max-width: 700px;
+    margin: 0 auto;
+}
+
+#about h2 {
+    max-width: 700px;
+    margin: 0 auto var(--space-lg);
 }
 
 .about-text p {
     margin-bottom: var(--space-sm);
 }
 
-/* ---------- Skills ---------- */
-#skills {
-    padding: var(--space-xl) var(--space-lg);
+.education-card h3 {
+    margin-bottom: var(--space-xs);
 }
 
+.education-card p {
+    color: var(--color-text-muted);
+    margin-top: var(--space-xs);
+}
+
+#education h2 {
+    margin-bottom: var(--space-lg);
+}
+
+/* ---------- Skills ---------- */
 #skills h2 {
     margin-bottom: var(--space-lg);
 }
@@ -152,13 +206,6 @@ nav a:hover {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: var(--space-lg);
-}
-
-.skill-category {
-    background-color: white;
-    border-radius: 12px;
-    padding: var(--space-md);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .skill-category h3 {
@@ -172,10 +219,6 @@ nav a:hover {
 }
 
 /* ---------- Projects / Experience / Achievements ---------- */
-#projects, #experience, #achievements {
-    padding: var(--space-xl) var(--space-lg);
-}
-
 #projects h2, #experience h2, #achievements h2 {
     margin-bottom: var(--space-lg);
 }
@@ -193,38 +236,31 @@ nav a:hover {
     grid-template-columns: 1fr;
 }
 
-.project-card, .experience-card, .achievement-card {
-    background-color: white;
+.project-card, .experience-card, .achievement-card, .skill-category, .education-card {
+    background-color: var(--color-card);
     border-radius: 12px;
     padding: var(--space-md);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease,
+                background-color 0.3s ease, color 0.3s ease;
 }
 
 .project-card:hover,
 .experience-card:hover,
-.achievement-card:hover {
+.achievement-card:hover,
+.skill-category:hover,
+.education-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
+
 /* Images: stacked above text, natural proportions, smaller than full width */
-.project-card img,
-.experience-card img,
-.achievement-card img,
-.image-gallery img {
+.project-card img {
     max-width: 70%;
     height: auto;
     border-radius: 8px;
     margin-bottom: var(--space-sm);
     display: block;
-}
-
-/* Mini gallery for cards with multiple photos */
-.image-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-xs);
-    margin-bottom: var(--space-sm);
 }
 
 .project-card h3,
@@ -259,120 +295,7 @@ nav a:hover {
     margin-bottom: var(--space-xs);
 }
 
-/* ---------- Contact ---------- */
-#contact {
-    padding: var(--space-xl) var(--space-lg);
-    max-width: 700px;
-}
-
-#contact p {
-    color: var(--color-text-muted);
-    margin-bottom: var(--space-lg);
-}
-
-.form-group {
-    margin-bottom: var(--space-md);
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: var(--space-xs);
-    font-weight: 500;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: var(--space-xs);
-    border: 1px solid #cbd5e1;
-    border-radius: 8px;
-    font-family: var(--font-body);
-    font-size: 1rem;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--color-primary);
-}
-
-#contact button {
-    background-color: var(--color-primary);
-    color: white;
-    border: none;
-    padding: var(--space-xs) var(--space-md);
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-#contact button:hover {
-    background-color: var(--color-dark);
-}
-
-/* ---------- Footer ---------- */
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--space-md) var(--space-lg);
-    background-color: var(--color-dark);
-    color: var(--color-light);
-}
-
-.social-links {
-    display: flex;
-    gap: var(--space-md);
-}
-
-.social-links a {
-    color: var(--color-light);
-    text-decoration: none;
-}
-
-.social-links a:hover {
-    color: var(--color-primary);
-}
-
-/* ---------- Mobile Responsive ---------- */
-@media (max-width: 768px) {
-    #hero {
-        flex-direction: column-reverse;
-        text-align: center;
-        min-height: auto;
-        padding: var(--space-lg) var(--space-sm);
-    }
-
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .skills-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-.reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.reveal.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-@media (prefers-reduced-motion: reduce) {
-    * {
-        transition: none !important;
-        animation: none !important;
-    }
-
-    .reveal {
-        opacity: 1;
-        transform: none;
-    }
-}
+/* ---------- Experience / Achievement card layout (image + text split) ---------- */
 .experience-card,
 .achievement-card {
     display: flex;
@@ -400,18 +323,13 @@ footer {
     margin: 0 auto;
 }
 
-@media (max-width: 768px) {
-    .experience-card,
-    .achievement-card {
-        flex-direction: column-reverse;
-    }
-
-    .card-media {
-        flex-basis: auto;
-        max-width: 100%;
-        width: 100%;
-    }
+/* Zigzag: alternate image side for every 2nd card (desktop only) */
+.experience-card:nth-child(even),
+.achievement-card:nth-child(even) {
+    flex-direction: row-reverse;
 }
+
+/* ---------- Carousel ---------- */
 .carousel {
     position: relative;
 }
@@ -448,7 +366,7 @@ footer {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: #cbd5e1;
+    background-color: var(--color-border);
     border: none;
     cursor: pointer;
     padding: 0;
@@ -458,29 +376,162 @@ footer {
 .dot.active {
     background-color: var(--color-primary);
 }
-.kicker {
-    display: block;
-    font-family: var(--font-body);
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
+
+/* ---------- Contact ---------- */
+#contact {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#contact p {
     color: var(--color-text-muted);
+    margin-bottom: var(--space-lg);
+}
+
+.form-group {
+    margin-bottom: var(--space-md);
+}
+
+.form-group label {
+    display: block;
     margin-bottom: var(--space-xs);
-}
-#about, #skills, #projects, #experience, #achievements, #contact {
-    padding: var(--space-2xl) var(--space-lg);
-}
-section:not(#hero) {
-    border-top: 1px solid #e2e8f0;
-}
-h2 {
-    font-size: 2.5rem;
     font-weight: 500;
-    letter-spacing: -0.02em;
-    line-height: 1.15;
 }
-.experience-card:nth-child(even),
-.achievement-card:nth-child(even) {
-    flex-direction: row-reverse;
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: var(--space-xs);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    background-color: var(--color-card);
+    color: var(--color-text);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+#contact button {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: var(--space-xs) var(--space-md);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #1e40af;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-md) var(--space-lg);
+    background-color: #0f172a;
+    color: #f8fafc;
+}
+
+.footer-email {
+    color: var(--color-light);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.footer-email:hover {
+    opacity: 0.7;
+}
+
+.social-links {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.social-links a {
+    color: var(--color-light);
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: var(--color-primary);
+}
+
+/* ---------- Scroll reveal ---------- */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =====================================================
+   MOBILE RESPONSIVE — kept LAST on purpose.
+   CSS resolves ties (equal specificity) by source order,
+   so every override that needs to beat a desktop-only
+   rule (like the zigzag nth-child rule above) must be
+   physically positioned after it in the file.
+   ===================================================== */
+@media (max-width: 768px) {
+    #hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        min-height: auto;
+        padding: var(--space-lg) var(--space-sm);
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Must match the zigzag rule's specificity (class + :nth-child)
+       to reliably win the tie, since both now sit at the same level —
+       this rule wins because it comes later in the file. */
+    .experience-card,
+    .achievement-card,
+    .experience-card:nth-child(even),
+    .achievement-card:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+
+    .card-media {
+        flex-basis: auto;
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+.hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-sm);
 }
