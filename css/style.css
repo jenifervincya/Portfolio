@@ -1,18 +1,4 @@
 /* CSS Reset */
-html, body {
-    overflow-x: hidden;
-    width: 100%;
-    max-width: 100%;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-* {
-    overflow-wrap: break-word;
-}
 * {
     margin: 0;
     padding: 0;
@@ -80,31 +66,6 @@ header {
     z-index: 100;
     flex-wrap: wrap;
     gap: var(--space-sm);
-}
-
-.logo-group {
-    display: flex;
-    align-items: center;
-    gap: var(--space-sm);
-}
-
-#nav-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-}
-
-#nav-toggle span {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background-color: var(--color-text);
-    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 nav ul {
@@ -242,12 +203,9 @@ h2 {
 }
 
 .skills-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-sm);
-}
-
-.skill-category {
-    padding: var(--space-sm);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
 }
 
 .skill-category h3 {
@@ -528,32 +486,6 @@ footer {
    physically positioned after it in the file.
    ===================================================== */
 @media (max-width: 768px) {
-    #nav-toggle {
-        display: flex;
-    }
-
-    #nav-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: var(--color-light);
-        flex-direction: column;
-        align-items: center;
-        padding: var(--space-md);
-        gap: var(--space-md);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    }
-
-    #nav-menu.is-open {
-        display: flex;
-    }
-
-    header {
-        position: relative;
-    }
-
     #hero {
         flex-direction: column-reverse;
         text-align: center;
@@ -565,71 +497,24 @@ footer {
         font-size: 2rem;
     }
 
-    .hero-links {
-        justify-content: center;
-    }
-
     .skills-grid {
         grid-template-columns: 1fr 1fr;
     }
 
+    /* Must match the zigzag rule's specificity (class + :nth-child)
+       to reliably win the tie, since both now sit at the same level —
+       this rule wins because it comes later in the file. */
     .experience-card,
     .achievement-card,
     .experience-card:nth-child(even),
     .achievement-card:nth-child(even) {
         flex-direction: column-reverse;
-        max-width: 100%;
-        overflow: hidden;
     }
 
-    .card-media,
-    .carousel,
-    .carousel-track {
+    .card-media {
         flex-basis: auto;
         max-width: 100%;
         width: 100%;
-    }
-
-    #about, #education, #skills, #projects, #experience, #achievements, #contact {
-        padding-left: var(--space-sm);
-        padding-right: var(--space-sm);
-    }
-
-    header {
-        padding-left: var(--space-sm);
-        padding-right: var(--space-sm);
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.75rem;
-    }
-
-    h3 {
-        font-size: 1.15rem;
-    }
-
-    .hero-content p {
-        font-size: 1.1rem;
-    }
-
-    body {
-        font-size: 0.95rem;
-    }
-}
-
-@media (max-width: 480px) {
-
-    .hero-links {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .btn {
-        text-align: center;
     }
 }
 
