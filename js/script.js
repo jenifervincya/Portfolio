@@ -61,3 +61,17 @@ themeToggle.addEventListener('click', () => {
         themeToggle.textContent = '☀️';
     }
 });
+const navToggle = document.getElementById('nav-toggle');
+const navMenu = document.getElementById('nav-menu');
+
+navToggle.addEventListener('click', () => {
+    const isOpen = navMenu.classList.toggle('is-open');
+    navToggle.setAttribute('aria-expanded', isOpen);
+});
+
+navMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+    });
+});
