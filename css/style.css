@@ -470,6 +470,10 @@ footer {
     transition: opacity 0.2s ease;
 }
 
+.footer-break {
+    display: none;
+}
+
 .footer-email:hover {
     opacity: 0.7;
 }
@@ -538,6 +542,10 @@ footer {
         flex-basis: auto;
         max-width: 100%;
         width: 100%;
+    }
+
+    .footer-break {
+        display: block;
     }
 }
 
