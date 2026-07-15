@@ -5,6 +5,17 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 :root {
     /* Colors */
     --color-primary: #2563eb;
@@ -70,7 +81,9 @@ header {
 
 nav ul {
     display: flex;
+    flex-wrap: wrap;
     gap: var(--space-md);
+    justify-content: center;
 }
 
 nav a {
@@ -204,7 +217,7 @@ h2 {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: var(--space-lg);
 }
 
@@ -216,6 +229,7 @@ h2 {
 .skill-category li {
     margin-bottom: var(--space-xs);
     color: var(--color-text-muted);
+    overflow-wrap: break-word;
 }
 
 /* ---------- Projects / Experience / Achievements ---------- */
@@ -228,6 +242,10 @@ h2 {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--space-lg);
     align-items: start;
+}
+
+.card-grid > * {
+    min-width: 0;
 }
 
 /* Experience and Achievements stack one card per row */
@@ -307,11 +325,13 @@ h2 {
 .experience-details,
 .achievement-details {
     flex: 1 1 50%;
+    min-width: 0;
 }
 
 .card-media {
     flex: 1 1 50%;
     max-width: 50%;
+    min-width: 0;
 }
 
 .card-media img {
@@ -435,8 +455,10 @@ h2 {
 /* ---------- Footer ---------- */
 footer {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
+    gap: var(--space-sm);
     padding: var(--space-md) var(--space-lg);
     background-color: #0f172a;
     color: #f8fafc;
@@ -485,7 +507,11 @@ footer {
    rule (like the zigzag nth-child rule above) must be
    physically positioned after it in the file.
    ===================================================== */
+
 @media (max-width: 768px) {
+    #about, #education, #skills, #projects, #experience, #achievements, #contact {
+        padding: var(--space-lg) var(--space-sm);
+    }
     #hero {
         flex-direction: column-reverse;
         text-align: center;
@@ -498,12 +524,9 @@ footer {
     }
 
     .skills-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    /* Must match the zigzag rule's specificity (class + :nth-child)
-       to reliably win the tie, since both now sit at the same level —
-       this rule wins because it comes later in the file. */
     .experience-card,
     .achievement-card,
     .experience-card:nth-child(even),
@@ -515,6 +538,15 @@ footer {
         flex-basis: auto;
         max-width: 100%;
         width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .skills-grid {
+        grid-template-columns: minmax(0, 1fr);
     }
 }
 
