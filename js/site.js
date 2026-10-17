@@ -3,7 +3,7 @@
   const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const store = { get: k => { try { return localStorage.getItem(k); } catch { return null; } }, set: (k, v) => { try { localStorage.setItem(k, v); } catch {} } };
   const root = document.documentElement;
-  root.dataset.theme = store.get('theme') || 'dark';
+  root.dataset.theme = store.get('theme') || 'light';
 
   const pages = [['index', 'Home'], ['about', 'About'], ['projects', 'Projects'], ['experience', 'Experience'], ['achievements', 'Achievements'], ['publication', 'Publication'], ['contact', 'Contact']];
   const cur = document.body.dataset.page;
