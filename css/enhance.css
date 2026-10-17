@@ -68,3 +68,27 @@ h2::after{content:"";display:block;width:64px;height:4px;margin-top:var(--space-
 .project-card.reveal,.achievement-card.reveal,.experience-card.reveal,.skill-category.reveal,.education-card.reveal{transition:opacity .6s ease,transform .6s ease,box-shadow .25s,border-color .25s}
 .project-card a{display:inline-block;transition:transform .2s}
 .project-card a:hover{transform:translateX(4px)}
+
+/* ===== Tabs ===== */
+body.tabs section[id]:not(.tab-active){display:none !important}
+body.tabs section:not(#hero){min-height:65vh;padding:var(--space-lg) var(--space-lg)}
+body.tabs section:not(#hero) .card-grid,body.tabs section:not(#hero) .skills-grid{max-width:1100px;margin-left:auto;margin-right:auto}
+.logo{cursor:pointer}
+nav a{padding-bottom:.25rem;border-bottom:2px solid transparent}
+nav a.active{border-bottom-color:var(--copper)}
+
+/* ===== Smaller, tidier images ===== */
+.card-media{flex:0 0 240px;max-width:240px;width:240px}
+.card-media img,.card-media .carousel-track img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:10px;margin:0}
+.experience-card,.achievement-card{align-items:center}
+.experience-card:nth-child(even),.achievement-card:nth-child(even){flex-direction:row}
+.experience-details,.achievement-details{flex:1 1 auto}
+.experience-details p:last-child,.achievement-details p:last-child{margin-bottom:0}
+@media (max-width:768px){
+  body.tabs section:not(#hero){padding:var(--space-md) var(--space-sm)}
+  .experience-card,.achievement-card,.experience-card:nth-child(even),.achievement-card:nth-child(even){flex-direction:column-reverse;align-items:stretch}
+  .card-media{flex:none;width:100%;max-width:100%}
+  .card-media img,.card-media .carousel-track img{aspect-ratio:16/10}
+  #experience .card-grid{padding-left:var(--space-sm)}
+  #experience .experience-card::before{left:calc(-1 * var(--space-sm) - 8px)}
+}
