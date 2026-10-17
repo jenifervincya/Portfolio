@@ -43,3 +43,28 @@ h2::after{content:"";display:block;width:64px;height:4px;margin-top:var(--space-
 .coding-num{font-family:var(--font-heading);font-size:2rem;color:var(--color-primary)}
 .reveal{transform:translateY(16px)}
 @media (max-width:768px){#publication,#certifications,#coding{padding:var(--space-lg) var(--space-sm)}.hero-image img{box-shadow:8px 8px 0 var(--copper)}#experience .experience-card:nth-child(even){flex-direction:column-reverse}}
+
+/* ===== Engagement upgrade ===== */
+#progress{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--color-primary),var(--copper));z-index:300}
+#totop{position:fixed;right:1.2rem;bottom:1.2rem;width:2.8rem;height:2.8rem;border-radius:50%;border:2px solid var(--copper);background:var(--color-card);color:var(--copper);font-size:1.2rem;cursor:pointer;opacity:0;pointer-events:none;transform:translateY(10px);transition:.25s;z-index:200}
+#totop.show{opacity:1;pointer-events:auto;transform:none}
+#totop:hover{background:var(--copper);color:#fff}
+#hero::after{content:"";position:absolute;width:420px;height:420px;right:-80px;top:-60px;background:radial-gradient(circle,color-mix(in srgb,var(--copper) 35%,transparent),transparent 70%);filter:blur(30px);animation:drift 9s ease-in-out infinite;pointer-events:none}
+@keyframes drift{50%{transform:translate(-50px,50px)}}
+.hero-image img{animation:bob 6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-12px) rotate(-1deg)}}
+.typed-line{font-size:1.15rem;margin-bottom:var(--space-sm);color:var(--color-text)}
+.typed{color:var(--copper);font-weight:600;border-right:2px solid var(--copper);padding-right:3px;animation:blink 1s step-end infinite}
+@keyframes blink{50%{border-color:transparent}}
+.filters{display:flex;flex-wrap:wrap;gap:var(--space-xs);margin-bottom:var(--space-md)}
+.filters button{font:500 .9rem var(--font-body);padding:.4rem 1rem;border-radius:999px;border:1.5px solid var(--color-border);background:var(--color-card);color:var(--color-text);cursor:pointer;transition:.2s}
+.filters button:hover{border-color:var(--copper)}
+.filters button.on{background:var(--color-primary);border-color:var(--color-primary);color:#fff}
+[data-theme="dark"] .filters button.on{color:#06201c}
+.project-card.hide{display:none}
+.project-card,.achievement-card{position:relative;overflow:hidden}
+.project-card::after,.achievement-card::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%),color-mix(in srgb,var(--copper) 18%,transparent),transparent 70%)}
+.project-card:hover::after,.achievement-card:hover::after{opacity:1}
+.project-card.reveal,.achievement-card.reveal,.experience-card.reveal,.skill-category.reveal,.education-card.reveal{transition:opacity .6s ease,transform .6s ease,box-shadow .25s,border-color .25s}
+.project-card a{display:inline-block;transition:transform .2s}
+.project-card a:hover{transform:translateX(4px)}
