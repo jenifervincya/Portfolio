@@ -75,3 +75,6 @@ footer a{text-decoration:none}footer a:hover{color:var(--g)}footer div{display:f
 nav.open{display:block}nav ul{flex-direction:column;gap:.9rem}.portrait{margin-top:1rem}.chip-f{display:none}
 .row{flex-direction:column-reverse;align-items:flex-start}.thumb{flex:none}.wrap{padding:3rem 5vw}.hero{min-height:auto}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+.gal{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem;position:relative;z-index:1}
+.gal img{width:96px;height:96px;object-fit:cover;border-radius:10px;border:1px solid var(--line);transition:.2s}
+.gal a:hover img{border-color:var(--cu);transform:scale(1.06)}
